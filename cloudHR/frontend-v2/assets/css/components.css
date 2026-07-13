@@ -1,0 +1,189 @@
+/* ===============================
+   Buttons
+================================ */
+
+.btn{
+
+    border-radius:10px;
+    padding:14px 30px;
+    font-weight:600;
+
+}
+
+.btn-primary{
+
+    background:var(--primary-color);
+    border:none;
+    border-radius:8px;
+    padding:10px 24px;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-outline-primary{
+
+    border:2px solid var(--primary-color);
+
+}
+
+/* ===============================
+   Hero
+================================ */
+
+.hero{
+
+    padding-top:170px;
+    padding-bottom:120px;
+
+}
+
+.hero-title{
+
+    font-size:3.3rem;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
+
+}
+
+.hero-text{
+
+    font-size:18px;
+    color:var(--text-light);
+    line-height:1.8;
+    max-width:520px;
+
+}
+
+.hero-image{
+
+    width:100%;
+    max-width:520px;
+
+}
+
+/* ===============================
+   Section Titles
+================================ */
+
+.section-title{
+
+    font-size:2.5rem;
+    font-weight:700;
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    color:var(--text-light);
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+
+}
+
+/* ===============================
+   Feature Cards
+================================ */
+
+.feature-card{
+
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.35s;
+    height:100%;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-icon{
+
+    width:75px;
+    height:75px;
+    background:#EEF4FF;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 25px;
+
+}
+
+.feature-icon i{
+
+    font-size:30px;
+    color:var(--primary-color);
+
+}
+
+.feature-card h4{
+
+    margin-bottom:15px;
+    font-weight:600;
+
+}
+
+.feature-card p{
+
+    color:var(--text-light);
+    line-height:1.7;
+
+}
+
+/* ===============================
+   Architecture Cards
+================================ */
+
+.architecture-section{
+
+    background:white;
+
+}
+
+.architecture-grid{
+
+    max-width:900px;
+    margin:auto;
+
+}
+
+.arch-card{
+
+    background:#fff;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+
+}
+
+.arch-card i{
+
+    font-size:42px;
+    color:var(--primary-color);
+    margin-bottom:20px;
+
+}
+
+.arrow{
+
+    text-align:center;
+    font-size:30px;
+    color:var(--primary-color);
+    margin:20px 0;
+
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Employee | CloudHR</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="top-navbar"></nav>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-cloud"></i>
+                <span>CloudHR</span>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="employees.html">
+                        <i class="fa-solid fa-users"></i>
+                        Employees
+                    </a>
+                </li>
+
+                <li>
+    <a href="documents.html">
+        <i class="fa-solid fa-folder"></i>
+        Documents
+    </a>
+</li>
+
+                <li>
+    <a href="reports.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reports
+    </a>
+</li>
+<li>
+                <a href="settings.html">
+    <i class="fa-solid fa-gear"></i>
+    Settings
+</a>
+</li>
+<li>
+
+                <a href="profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+            </li>
+                <li>
+                    <a href="#" onclick="logout()">
+
+    <i class="fa-solid fa-right-from-bracket"></i>
+
+    Logout
+
+</a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <h2 class="mb-4">
+                Edit Employee
+            </h2>
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <!-- Employee ID -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Employee ID
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="employeeId"
+                                readonly>
+
+                        </div>
+
+                        <!-- Name -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="employeeName">
+
+                        </div>
+
+                        <!-- Department -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Department
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="employeeDepartment">
+
+                                <option>IT</option>
+                                <option>HR</option>
+                                <option>Finance</option>
+                                <option>Marketing</option>
+                                <option>Operations</option>
+
+                            </select>
+
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="employeeEmail">
+
+                        </div>
+
+                        <!-- Joining Date -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Joining Date
+                            </label>
+
+                            <input
+                                type="date"
+                                class="form-control"
+                                id="employeeJoining">
+
+                        </div>
+
+                        <!-- Status -->
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+                                Status
+                            </label>
+
+                            <select
+                                class="form-select"
+                                id="employeeStatus">
+
+                                <option value="Pending">
+                                    Pending
+                                </option>
+
+                                <option value="Approved">
+                                    Approved
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Save Button -->
+                    <div class="text-end mt-4">
+
+                        <button
+                            id="saveEmployee"
+                            class="btn btn-primary">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/edit-employee.js"></script>
+<script>
+
+function logout(){
+
+    sessionStorage.removeItem("loggedIn");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+</body>
+
+</html>

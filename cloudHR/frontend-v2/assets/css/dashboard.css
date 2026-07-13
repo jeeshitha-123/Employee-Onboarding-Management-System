@@ -1,0 +1,108 @@
+/* =======================================
+   Dashboard Styles
+======================================= */
+
+/*
+Dashboard cards
+
+Charts
+
+Sidebar active menu
+
+Quick Actions
+
+Tables
+
+Statistics
+
+Responsive dashboard
+*/
+.dashboard-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+}
+
+.dashboard-card h6{
+
+    color:var(--text-light);
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card h2{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:var(--primary-color);
+
+}
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.card-header{
+
+    background:white;
+
+    font-weight:600;
+
+    border-bottom:none;
+
+    padding:20px;
+
+}
+
+.card-body{
+
+    padding:25px;
+
+}
+.dashboard-card{
+
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+
+}
+
+.dashboard-card:hover{
+
+transform:translateY(-6px);
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.dashboard-card h6{
+
+color:#6c757d;
+font-weight:600;
+
+}
+
+.dashboard-card h2{
+
+font-weight:700;
+margin-top:10px;
+
+}

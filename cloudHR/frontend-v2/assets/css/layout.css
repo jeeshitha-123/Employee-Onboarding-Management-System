@@ -1,0 +1,144 @@
+/* ===============================
+   Navbar
+================================ */
+
+.navbar{
+
+    padding:18px 0;
+    transition:.3s;
+
+}
+
+.navbar-brand{
+
+    color:var(--primary-color)!important;
+    font-weight:700;
+
+}
+
+.nav-link{
+
+    color:var(--text-dark)!important;
+    font-weight:500;
+    margin-left:20px;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--primary-color)!important;
+
+}
+
+.btn-primary{
+
+    background:var(--primary-color);
+    border:none;
+    border-radius:8px;
+    padding:10px 24px;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+/* ===========================
+Dashboard Layout
+=========================== */
+
+.dashboard-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.sidebar{
+
+    width:260px;
+
+    background:#1F2937;
+
+    color:white;
+
+    padding:30px 20px;
+
+}
+
+.logo{
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+.logo i{
+
+    color:#3B82F6;
+
+    margin-right:10px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.sidebar li{
+
+    margin-bottom:15px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#374151;
+
+}
+
+.sidebar .active a{
+
+    background:#2563EB;
+
+}
+
+.main-content{
+
+    flex:1;
+
+    padding:40px;
+
+    background:#F8FAFC;
+
+}
