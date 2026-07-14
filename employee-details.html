@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Details | CloudHR</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="top-navbar"></nav>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                <span>CloudHR</span>
+
+            </div>
+
+            <ul>
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="employees.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Employees
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="documents.html">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                        Documents
+
+                    </a>
+
+                </li>
+
+                <li>
+    <a href="reports.html">
+        <i class="fa-solid fa-chart-column"></i>
+        Reports
+    </a>
+</li>
+<li>
+                <a href="settings.html">
+    <i class="fa-solid fa-gear"></i>
+    Settings
+</a>
+</li>
+<li>
+
+                <a href="profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+            </li>
+                <li>
+
+                    <a href="#" onclick="logout()">
+
+    <i class="fa-solid fa-right-from-bracket"></i>
+
+    Logout
+
+</a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <h2 class="mb-4">
+
+                Employee Details
+
+            </h2>
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Employee ID
+
+                            </label>
+
+                            <p id="employeeId" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Name
+
+                            </label>
+
+                            <p id="employeeName" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Department
+
+                            </label>
+
+                            <p id="employeeDepartment" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Status
+
+                            </label>
+
+                            <p id="employeeStatus" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Email
+
+                            </label>
+
+                            <p id="employeeEmail" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="fw-bold">
+
+                                Joining Date
+
+                            </label>
+
+                            <p id="employeeJoining" class="mt-2 text-secondary"></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-end mt-4">
+
+                        <a href="employees.html" class="btn btn-secondary">
+
+                            <i class="fa-solid fa-arrow-left"></i>
+
+                            Back
+
+                        </a>
+
+                        <button
+                            id="editEmployeeBtn"
+                            class="btn btn-primary ms-2">
+
+                            <i class="fa-solid fa-pen"></i>
+
+                            Edit Employee
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+<div class="card shadow-sm mt-4">
+
+    <div class="card-header">
+
+        <h5 class="mb-0">
+            Onboarding Progress
+        </h5>
+
+    </div>
+    <div class="card shadow-sm mt-4">
+
+    <div class="card-header">
+
+        <h5 class="mb-0">
+            Update Onboarding Progress
+        </h5>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+
+                <label>Registration</label>
+
+                <select
+                    id="registrationSelect"
+                    class="form-select">
+
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+
+                <label>Documents</label>
+
+                <select
+                    id="documentsSelect"
+                    class="form-select">
+
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+
+                <label>Verification</label>
+
+                <select
+                    id="verificationSelect"
+                    class="form-select">
+
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+
+                </select>
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+
+                <label>Training</label>
+
+                <select
+                    id="trainingSelect"
+                    class="form-select">
+
+                    <option value="Pending">Pending</option>
+                    <option value="Approved">Approved</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <div class="text-end mt-3">
+
+            <button
+                id="saveProgress"
+                class="btn btn-success">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Progress
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="card-body">
+
+        <div class="mb-3">
+
+            <label>Registration</label>
+
+            <span
+                id="registrationStatus"
+                class="badge bg-secondary float-end">
+                -
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Documents</label>
+
+            <span
+                id="documentsStatus"
+                class="badge bg-secondary float-end">
+                -
+            </span>
+
+        </div>
+
+        <div class="mb-3">
+
+            <label>Verification</label>
+
+            <span
+                id="verificationStatus"
+                class="badge bg-secondary float-end">
+                -
+            </span>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label>Training</label>
+
+            <span
+                id="trainingStatus"
+                class="badge bg-secondary float-end">
+                -
+            </span>
+
+        </div>
+
+        <label class="fw-bold">
+            Overall Progress
+        </label>
+
+        <div class="progress mt-2">
+
+            <div
+                id="progressBar"
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width:0%;">
+
+                0%
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+        </main>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/employee-details.js"></script>
+<script>
+
+function logout(){
+
+    sessionStorage.removeItem("loggedIn");
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+</body>
+
+</html>

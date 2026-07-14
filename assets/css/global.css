@@ -1,0 +1,60 @@
+/* ===============================
+   CloudHR Design System
+   =============================== */
+
+:root {
+
+    --primary-color: #2563EB;
+    --primary-dark: #1D4ED8;
+
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+    --danger-color: #EF4444;
+
+    --background-color: #F8FAFC;
+
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+
+    --white: #FFFFFF;
+
+    --border-color: #E5E7EB;
+
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    --radius:12px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--background-color);
+    color:var(--text-dark);
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+.container{
+
+    max-width:1200px;
+
+}
